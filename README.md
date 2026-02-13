@@ -1,8 +1,10 @@
 # chip8-emulator
 
-My version of Chip 8 Emulator with sound using SDL2.0
+My version of Chip 8 Emulator using SDL2.0
 
-![](https://media.giphy.com/media/dZiI0IWx4cLGGDo0UD/giphy.gif)
+
+https://github.com/user-attachments/assets/7c459457-ba08-4959-9a13-89e4f87d69ec
+
 
 ## Install Instructions:
   1. Download and unpack the repo.
