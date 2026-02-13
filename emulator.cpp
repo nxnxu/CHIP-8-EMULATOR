@@ -2,6 +2,7 @@
 
 #include <algorithm>
 #include <stdint.h>
+#include <cstring>
 
 uint8_t	memory[MAX_MEMORY] = {
 
@@ -166,6 +167,7 @@ emulate_ins8(uint16_t instruction)
 		
 		case 0x2:
 			reg[x] &= reg[y];
+			break;
 		
 		case 0x3:
 			reg[x] ^= reg[y];
@@ -198,6 +200,7 @@ emulate_ins8(uint16_t instruction)
 		case 0xE:
 			reg[0xf] = (reg[x] & 0x80)? 0x1: 0x0;
 			reg[x] <<= 1;
+			break;
 		
 		default:
 			return 1;

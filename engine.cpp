@@ -44,7 +44,7 @@ Engine::~Engine()
 void 
 Engine::update()
 {
-	while( SDL_PollEvent( &event ) ){
+	if ( SDL_PollEvent( &event ) ){
 
 		if( event.type == SDL_QUIT )
 			status = false;
@@ -59,6 +59,8 @@ Engine::update()
 
 			}
 		}
+	} else {
+		event.type = 0;
 	}
 
 	if (view_game && !game_halt) {
@@ -87,6 +89,10 @@ Engine::handle_game_view()
 			}
 		}
 	}
+
+	if (wtx.wait)
+		return 0;
+	
 	return emulate_instruction();
 }
 
